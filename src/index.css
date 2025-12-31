@@ -1,9 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind CSS v4 标准语法 */
+@import "tailwindcss";
 
-/* 加个背景色防止白屏刺眼 */
+/* v4 配置通常直接写在 CSS 中 (CSS-first configuration)
+  在此处定义主题变量
+*/
+@theme {
+  --color-gray-900: #18181b;
+}
+
+/* 基础样式重置 */
 body {
-  background-color: #18181b; 
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-gray-900);
   color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
